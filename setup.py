@@ -22,7 +22,6 @@ setup(
         "gpxpy>=1.5.0",
         "lxml>=4.9.0",
         "python-dateutil>=2.8.2",
-        "numpy>=1.24.0",
     ],
     extras_require={
         "dev": [

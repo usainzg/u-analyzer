@@ -30,8 +30,9 @@ def test_data_point_creation():
 
 def test_data_point_optional_fields():
     """Test that optional fields default to None."""
-    point = DataPoint(timestamp=datetime.now())
+    point = DataPoint()
     
+    assert point.timestamp is None
     assert point.latitude is None
     assert point.longitude is None
     assert point.altitude is None

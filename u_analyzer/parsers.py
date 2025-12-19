@@ -47,7 +47,7 @@ class FITParser(BaseParser):
             )
             
             for record in fitfile.get_messages('record'):
-                point = DataPoint(timestamp=None)
+                point = DataPoint()
                 
                 for field in record:
                     if field.name == 'timestamp':
@@ -191,7 +191,7 @@ class TCXParser(BaseParser):
             
             # Find all trackpoints
             for trackpoint in root.xpath('//tcx:Trackpoint', namespaces=ns):
-                point = DataPoint(timestamp=None)
+                point = DataPoint()
                 
                 # Time
                 time_elem = trackpoint.find('tcx:Time', ns)

@@ -9,7 +9,7 @@ from typing import Optional, List
 class DataPoint:
     """Represents a single data point in time during an activity."""
     
-    timestamp: datetime
+    timestamp: Optional[datetime] = None
     latitude: Optional[float] = None
     longitude: Optional[float] = None
     altitude: Optional[float] = None

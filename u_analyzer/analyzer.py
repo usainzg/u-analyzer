@@ -72,15 +72,12 @@ class Analyzer:
         """Get all loaded activities."""
         return self.activities
     
-    def get_synchronized_data(self, time_resolution: float = 1.0) -> Dict[str, List[Dict]]:
+    def get_synchronized_data(self) -> Dict[str, List[Dict]]:
         """
         Get synchronized data from all activities.
         
         Aligns all activities by their relative timestamps, starting from 0.
         
-        Args:
-            time_resolution: Time resolution in seconds for synchronization
-            
         Returns:
             Dictionary mapping activity names to lists of synchronized data points
         """
